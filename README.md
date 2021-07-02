@@ -1,9 +1,10 @@
-**Final Project**
+# Spectral Renderer && Iridescence
 
-Student name: Etienne Salimbeni
 
-Sciper number: 270963
+<img src="renders/final.png" width="100%">
 
+This is my entry for the Advanced Computer Graphics (EPFL) competition.
+The project consist in extend the NORI renderer, in my case I chose spectral rendering and thin film iridescence.
 
 Goal
 ====
@@ -277,18 +278,3 @@ Final render
     <img src="sketch.jpeg" width="100%">
 -->
 <img src="renders/final.png" width="100%">
-
-<!-- Slider -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="../resources/jquery.event.move.js"></script>
-<script src="../resources/jquery.twentytwenty.js"></script>
-<link href="../resources/offcanvas.css" rel="stylesheet">
-<link href="../resources/twentytwenty.css" rel="stylesheet" type="text/css" />
-<script>var markdeepOptions = {onLoad: function() {$(".twentytwenty-container").twentytwenty({default_offset_pct: 0.5, move_slider_on_hover: true});} };</script>
-<!-- Markdeep: -->
-<script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
-<script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
-
-
-
-
