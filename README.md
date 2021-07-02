@@ -1,4 +1,4 @@
-# Spectral Renderer && Iridescence
+# Spectral Renderer && Thin Film Iridescence
 
 
 <img src="renders/final.png" width="100%">
@@ -120,10 +120,13 @@ more physically based behaviours , a diffraction index spectra for each material
 Another advantage of using a spectral ray tracer is to use wavelenght dependent emitters, which gives a more natural look to the scene.
 This can be done by applying Planks law as the return value of the emitter given a specific temperature.
 
+<!--
 <div style="display: flex;align-items: center;">
     $$ I(\lambda , T)  = \frac{2hc^2}{\lambda^5} \frac{1}{e^{\frac{hc}{\lambda k_bT}-1}} $$  
     <img src="renders/planks_law.png">
 </div>
+
+-->
 
 This can create warm and cold lights like the examples below one image at 3500K (left) and the other at 7000K (right) : 
 
