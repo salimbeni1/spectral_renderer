@@ -10,10 +10,12 @@ Goal
 
 Implement a spectral ray tracer to render wavelenght specific effects , in particular the thin film irredescence like the images below : 
 
+<p align="center">
 
 <img src="soap_bubble.jpg" width="46%">
 <img src="huile.jpg" width="51.5%">
 
+</p>
 
 Spectral Ray-tracing
 ====================
@@ -30,10 +32,12 @@ https://ceciliavision.github.io/graphics/a6/
 To achieve this, an new parameter wavelenght (wl) is added to the Ray class ,also the camera randomly generates rays with wl between 400 nm and 700 nm (the visible scpectrum).
 
 
-    
-        <img src="renders/1_sample.jpeg" alt="1 sample" width="49%">
-        <img src="renders/32_sample.jpeg" alt="32 sample" width="49%">
-    
+<p align="center">
+
+<img src="renders/1_sample.jpeg" alt="1 sample" width="49%">
+<img src="renders/32_sample.jpeg" alt="32 sample" width="49%">
+
+</p>   
 
 
 As showed in the renders above , this methods requires at least 3 times more samples to get an image , as each ray will only contribute its color.
@@ -58,10 +62,10 @@ The shortcut used here is to convert each RGB values to a spectra.
 This can be done beacuse the human eye is sensible to those 3 colors at very specific wavelengts 
 (look at the spectra below) due to the sensitivy of each cone type.
 
-<center>
+<p align="center">
     <img src="renders/human_cone_action_spectra.gif">
     [image source](https://www.unm.edu/~toolson/human_cone_response.htm)
-</center>
+</p>
 
 
 The follwing formula : 
@@ -85,24 +89,24 @@ When it comes to the implementation , a new BSDF class diffuse_spectral simply i
 Now with a spectral renderer it is possible to have dielectric materials that only allow some specific wavelenghts , 
 as u can see in the next 2 images (left with range [570nm,600nm] and right with range [450nm , 451nm] ). 
 
-<center>
+<p align="center">
     <img src="renders/dielectric_special1.jpeg" width="46%" >
     <img src="renders/dielectric_special3.jpeg" width="46%" >
-</center>
+</p>
 
 
 
 One other interesting aspect of the spectral ray tracer is to simplify the implementation for the difraction effect. (chromatic aberation)
 Just updating the diffraction index allowing them to change according to the wavelenght of the ray will generate interesting effects.
 
-<center>
+<p align="center">
     <img src="renders/diffract_1.jpeg" width="46%" >
     <img src="renders/diffract_2.jpeg" width="46%" >
-</center>
-<center>
+</p>
+<p align="center">
     <img src="renders/diffract_3.jpeg" width="46%" >
     <img src="renders/diffract_4.jpeg" width="46%" >
-</center>
+</p>
 
 
 A new class dielectric_spectral is created for this part , it is a copy of the dielectric BSDF , just that instead of having a fixed index of diffraction 
@@ -122,10 +126,10 @@ This can be done by applying Planks law as the return value of the emitter given
 
 This can create warm and cold lights like the examples below one image at 3500K (left) and the other at 7000K (right) : 
 
-<center>
+<p align="center">
     <img src="renders/3500K.png" alt="3500 K" width="46%" >
     <img src="renders/7000K.png" alt="7000 K" width="46%">
-</center>
+</p>
 
 Note that the exposure values had to be scaled to get comparable images. As Plank law get very drastic changes in intensity.
 
@@ -151,19 +155,19 @@ When a ray intersect a thin film , some light will directly bounce back ( ray b 
 Because the thin film is 'thin' the ray b and c will be very close except for their phase shift as ray c has traveled more.
 The extra distace if ray c is : $$ shift = d + \frac{\lambda}{2} = 2wncos(\theta_t) + \frac{\lambda}{2}$$
 
-<center>
+<p align="center">
     <img src="renders/thinfilmdiagram.png" width="70%" >
 
     [image source](https://en.wikipedia.org/wiki/Thin-film_interference)
-</center>
+</p>
 
 the principle is the same for a soap bubble , excpet that the ray can also pass trough the bubble : 
 
-<center>
+<p align="center">
     <img src="renders/Thin_film_interference_-_soap_bubble.gif" width="70%" >
     
     [image source](https://en.wikipedia.org/wiki/Thin-film_interference)
-</center>
+</p>
 
 
 
@@ -173,28 +177,28 @@ and use the previous formula to get the shift.
 
 
 In the following render , a soap bubble (left) and golden sphere covered with a thin film (right) , show the results yields by this technic
-<center>
+<p align="center">
     <img src="renders/thinfilm.png" width="100%" >
-</center>
+</p>
 
 Note that in this implementation we are not taking into account multiple bounce within the thin film , as only one bounce yield satisfactory results.
 
 
 Other configurations of the thinfilmspectral class with a black glass under the thin film : 
-<center>
+<p align="center">
     <img src="renders/thinfilm2.jpeg" width="56%" >
-</center>
+</p>
 
 different thickness of the layers for soap bubble (from left to right : 500 nm , 700 nm , 1000 nm and 1500 nm) : 
 
-<center>
+<p align="center">
     <img src="renders/bubble_500.png" width="46%" >
     <img src="renders/bubble_700.png" width="46%" >
-</center>
-<center>
+</p>
+<p align="center">
     <img src="renders/bubble_1000.png" width="46%" >
     <img src="renders/bubble_1500.png" width="46%" >
-</center>
+</p>
 
 Ideally the leayer thickness of the soap bubble is not constant bacause of gravity and wind ,
 which creates the typical wavy rainbow look of the soap bubble. For simplicity a constant thickness is used.
@@ -218,9 +222,9 @@ An attempt to reproduce the results from the paper :
 [A Physically Based Anisotropic Iridescence Model for Rendering Morpho Butterflies Photo-realistically
 from : Iman Sadeghi , University of California, San Diego](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.497.4956&rep=rep1&type=pdf)
 
-<center>
+<p align="center">
     <img src="renders/butterplybubble.jpeg" width="56%" >
-</center>
+</p>
 
 The limitation of the current ray tracer did not allow to use all the formulas of the paper.
 Notice that the brightness of the color is not as pronounced as in the paper. 
@@ -233,10 +237,10 @@ the formulas had to be scaled too for this part.
 
 
 
-<center>
+<p align="center">
     <img src="renders/scale_b.png" width="50%" >
     <img src="renders/butterfly_b.png" width="49%" >
-</center>
+</p>
 
 
 ## 3D blender Modeling
@@ -249,21 +253,21 @@ But I would have been lost without the help of the best youtubers :
 
 
 
-<center>
+<p align="center">
     <img src="renders/model1.png" width="49%" >
     <img src="renders/model2.png" width="49%" >
     <img src="renders/model3.png" width="49%" >
     <img src="renders/model4.png" width="49%" >
-</center>
+</p>
 
 ## Fluid Blender simulation
 
 I have been playing for too long with many parameters of the fuild simulator.
 
-<center>
+<p align="center">
     <img src="renders/fluid_2.jpeg" width="49%" >
     <img src="renders/fluid_1.jpeg" width="49%" >
-</center>
+</p>
 
 
 Final render
