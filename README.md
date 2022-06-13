@@ -64,7 +64,7 @@ This can be done beacuse the human eye is sensible to those 3 colors at very spe
 (look at the spectra below) due to the sensitivy of each cone type.
 
 <p align="center">
-    <img src="renders/human_cone_action_spectra.gif">
+    <img src="renders/human_cone_action_spectra.jpg">
     [image source](https://www.unm.edu/~toolson/human_cone_response.htm)
 </p>
 
@@ -160,17 +160,17 @@ Because the thin film is 'thin' the ray b and c will be very close except for th
 The extra distace if ray c is : $$ shift = d + \frac{\lambda}{2} = 2wncos(\theta_t) + \frac{\lambda}{2}$$
 
 <p align="center">
-    <img src="renders/thinfilmdiagram.png" width="70%" >
+    <img src="renders/thinfilmdiagram.jpg" width="70%" >
 
-    [image source](https://en.wikipedia.org/wiki/Thin-film_interference)
+    image source : (https://en.wikipedia.org/wiki/Thin-film_interference)
 </p>
 
 the principle is the same for a soap bubble , excpet that the ray can also pass trough the bubble : 
 
 <p align="center">
-    <img src="renders/Thin_film_interference_-_soap_bubble.gif" width="70%" >
+    <img src="renders/Thin_film_interference_-_soap_bubble.jpg" width="70%" >
     
-    [image source](https://en.wikipedia.org/wiki/Thin-film_interference)
+    image source : (https://en.wikipedia.org/wiki/Thin-film_interference)
 </p>
 
 
