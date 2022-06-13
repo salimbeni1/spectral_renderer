@@ -1,7 +1,7 @@
 # Spectral Renderer && Thin Film Iridescence
 
 
-<img src="renders/final.png" width="100%">
+<img src="renders/final-min.png" width="100%">
 
 This is my entry for the Advanced Computer Graphics (EPFL) competition.
 The project consist in extend the NORI renderer, in my case I chose spectral rendering and thin film iridescence.
@@ -64,8 +64,8 @@ This can be done beacuse the human eye is sensible to those 3 colors at very spe
 (look at the spectra below) due to the sensitivy of each cone type.
 
 <p align="center">
-    <img src="renders/human_cone_action_spectra.jpg">
-    [image source](https://www.unm.edu/~toolson/human_cone_response.htm)
+    <img src="renders/human_cone_action_spectra.gif">
+    image source : (https://www.unm.edu/~toolson/human_cone_response.htm)
 </p>
 
 
